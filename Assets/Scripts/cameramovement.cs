@@ -17,5 +17,6 @@ public class cameramovement : MonoBehaviour
         transform.position = smoothedPosition;
 
         transform.LookAt(target);
+        transform.rotation = Quaternion.Euler(90,0,0);
     }
 }

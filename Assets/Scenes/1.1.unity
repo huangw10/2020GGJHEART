@@ -869,8 +869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
-  Cam1: {fileID: 139426511}
-  Cam2: {fileID: 266267015}
+  Cam1: {fileID: 401777096}
+  Cam2: {fileID: 1059096711}
   distance: 5
   updateornot: 1
 --- !u!1 &1716671447

@@ -1442,7 +1442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravityCof: 9.8
-  playernum: 0
+  playernum: 1
 --- !u!54 &1482161468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravityCof: 9.8
-  playernum: 1
+  playernum: 0
 --- !u!54 &1525505587
 Rigidbody:
   m_ObjectHideFlags: 0

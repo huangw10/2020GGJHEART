@@ -1247,6 +1247,26 @@ PrefabInstance:
       propertyPath: Cam1
       value: 
       objectReference: {fileID: 1525505585}
+    - target: {fileID: 6004025012281702405, guid: d81943fcf6a10604285d39f1738a3d21,
+        type: 3}
+      propertyPath: distancey
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004025012281702405, guid: d81943fcf6a10604285d39f1738a3d21,
+        type: 3}
+      propertyPath: distancex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004025012281702405, guid: d81943fcf6a10604285d39f1738a3d21,
+        type: 3}
+      propertyPath: distance
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004025012281702405, guid: d81943fcf6a10604285d39f1738a3d21,
+        type: 3}
+      propertyPath: updateornot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6004025013655040323, guid: d81943fcf6a10604285d39f1738a3d21,
         type: 3}
       propertyPath: target

@@ -7,6 +7,7 @@ public class startmenu : MonoBehaviour
     // Start is called before the first frame update
     public Animator heart;
     private GameObject botton;
+    public Animator light;
     void Start()
     {
         botton = GameObject.FindGameObjectWithTag("Botton");
@@ -15,6 +16,7 @@ public class startmenu : MonoBehaviour
     public void StartGame()
     {
         heart.SetTrigger("startgame");
+        light.SetTrigger("startgame");
         botton.SetActive(false);
     }
 

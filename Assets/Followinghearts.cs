@@ -21,11 +21,12 @@ public class Followinghearts : MonoBehaviour
         }
         else if (obj_num == 1)
         {
-            this.transform.position = targetPosition.position + new Vector3(-0.75f,0,0);
+            this.transform.position = targetPosition.position + new Vector3(-0.75f, 0, 0);
         }
-        else {
+        else
+        {
             this.transform.position = targetPosition.position;
         }
-
+        
     }
 }

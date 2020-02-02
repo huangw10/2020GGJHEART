@@ -28,6 +28,7 @@ public class MovePlan1 : MonoBehaviour
             Debug.Log("here");
             movement = new Vector3(Input.GetAxis("Horizontal1"), 0, Input.GetAxis("Vertical1")) + Vector3.up * Physics.gravity.y * Time.deltaTime * gravityCof;
             Debug.Log(Input.GetAxis("Horizontal1"));
+            Debug.Log(Input.GetAxis("Vertical1"));
         }
 
     }

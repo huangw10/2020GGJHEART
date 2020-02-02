@@ -25,14 +25,20 @@ public class turner : MonoBehaviour
             if(count == 0)
             {
                 things[i].transform.Rotate(new Vector3(0, 90, 0));
-                count = 1;
             }
             else
             {
                 things[i].transform.Rotate(new Vector3(0, -90, 0));
-                count = 0;
             }
         }
 
+        if (count == 0)
+        {
+            count = 1;
+        }
+        else
+        {
+            count = 0;
+        }
     }
 }

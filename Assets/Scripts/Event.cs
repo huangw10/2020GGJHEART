@@ -14,9 +14,11 @@ public class Event : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         nextScene.AddListener(gotonext);
     }
 
+    
     IEnumerator heartmovement()
     {
 
@@ -29,4 +31,11 @@ public class Event : MonoBehaviour
         can.SetTrigger("fadeout");
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            nextScene.Invoke();
+        }
+
+    }
 }

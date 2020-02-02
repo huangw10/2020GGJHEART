@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowingLight : MonoBehaviour
 {
     public Transform targetPosition;
+    public float light_num;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,14 @@ public class FollowingLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = targetPosition.position + new Vector3(0.294f, 0.294f, 0.333f);
+        if (light_num == 0)
+        {
+            this.transform.position = targetPosition.position;
+        }
+        else
+        {
+            this.transform.position = targetPosition.position + new Vector3(-0, 0, 0);
+        }
+
     }
 }

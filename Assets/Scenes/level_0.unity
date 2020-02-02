@@ -270,7 +270,11 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_RenderMode: 4
+=======
+  m_RenderMode: 0
+>>>>>>> Chen
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -288,7 +292,11 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_VertexStreams: 00010304
+<<<<<<< HEAD
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_Mesh: {fileID: 6675168558077671681, guid: 29eb5be230354f44e82a92e3f7082bec, type: 3}
+>>>>>>> Chen
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -4959,8 +4967,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214164436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -169.6, y: 198.1, z: 102.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalPosition: {x: -169.6, y: 198.1, z: 105.66}
+  m_LocalScale: {x: 2, y: 2, z: 0.5751229}
+>>>>>>> Chen
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -5350,7 +5363,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+  m_RootOrder: 3
+>>>>>>> Chen
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &772065394
 GameObject:
@@ -5459,7 +5476,11 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_RenderMode: 4
+=======
+  m_RenderMode: 0
+>>>>>>> Chen
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -5477,7 +5498,11 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_VertexStreams: 00010304
+<<<<<<< HEAD
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_Mesh: {fileID: 7629811779324647873, guid: 58f063d0baa5b1243ae6d99fb27f967b, type: 3}
+>>>>>>> Chen
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -10693,7 +10718,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4b8c2c0f34583a043972680917d8e452,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 3
+=======
+      value: 2
+>>>>>>> Chen
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b8c2c0f34583a043972680917d8e452,
         type: 3}

@@ -16,6 +16,7 @@ public class startmenu : MonoBehaviour
 
     public void StartGame()
     {
+        this.GetComponent<AudioSource>().Play();
         heart.SetTrigger("startgame");
         light.SetTrigger("startgame");
         botton.SetActive(false);

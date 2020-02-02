@@ -24,7 +24,7 @@ public class Hint : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(direction);
         mp.rotation = rotation;
         mp.eulerAngles = new Vector3(90, mp.eulerAngles.y, mp.eulerAngles.z + 65);
-        Debug.Log("mp.rotation");
+
         // mp.Rotate();
 
     }

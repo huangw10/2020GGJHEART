@@ -45,4 +45,14 @@ public class MovePlan1 : MonoBehaviour
         rb.velocity = mm * speed;
     }
 
+    public void turnthisway()
+    {
+        rb.MoveRotation(new Quaternion(0, 0, 90, 0));
+    }
+
+    public void turnthatway()
+    {
+        rb.MoveRotation(new Quaternion(0, 0, -90, 0));
+    }
+
 }

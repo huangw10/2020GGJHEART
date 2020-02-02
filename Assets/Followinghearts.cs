@@ -38,4 +38,5 @@ public class Followinghearts : MonoBehaviour
     {
         this.transform.Rotate(new Vector3(0, -90, 0));
     }
+    
 }

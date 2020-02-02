@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: heart_color
+  m_Name: heart_color 2
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _EMISSION _SPECULAR_SETUP
   m_LightmapFlags: 2
@@ -64,7 +64,7 @@ Material:
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.838
+    - _Smoothness: 0.65
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
@@ -72,10 +72,10 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.9528302, g: 0.084, b: 0.07, a: 0.9019608}
+    - _BaseColor: {r: 1, g: 1, b: 0.986, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _EmissionColor: {r: 2.9377725, g: 0.10766706, b: 0.3845252, a: 1}
-    - _SpecColor: {r: 0.761, g: 0.727, b: 0.65, a: 1}
+    - _EmissionColor: {r: 2.509804, g: 0.34509805, b: 0.5019608, a: 1}
+    - _SpecColor: {r: 0.5849056, g: 0.021, b: 0.1146212, a: 1}
 --- !u!114 &8481019367832576471
 MonoBehaviour:
   m_ObjectHideFlags: 11

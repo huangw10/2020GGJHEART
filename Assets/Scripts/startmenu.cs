@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class startmenu : MonoBehaviour
 {
@@ -18,8 +19,15 @@ public class startmenu : MonoBehaviour
         heart.SetTrigger("startgame");
         light.SetTrigger("startgame");
         botton.SetActive(false);
+        StartCoroutine(ExampleCoroutine());
     }
+    IEnumerator ExampleCoroutine()
+    {
 
+        yield return new WaitForSeconds(2.5f);
+
+        SceneManager.LoadScene("level_0");
+    }
     // Update is called once per frame
     void Update()
     {

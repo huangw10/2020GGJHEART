@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ChenTest.unity
+    guid: e3688d09e7ef9e24bb5ec021aaec7539
   m_configObjects: {}

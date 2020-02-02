@@ -14,11 +14,11 @@ public class moveto : MonoBehaviour
     void Start()
     {
         Event.instance.nextScene.AddListener(starttomove);
-        startPosition = this.transform.position;
-        target = Cam1.transform.position + distance;
     }
     void starttomove() {
         move = true;
+        startPosition = this.transform.position;
+        target = Cam1.transform.position + distance;
     }
     void Update()
     {

@@ -24,16 +24,11 @@ public class Event : MonoBehaviour
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(6f);
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-            SceneManager.LoadScene("inter1");
-        else if(SceneManager.GetActiveScene().buildIndex == 3)
-            SceneManager.LoadScene("inter2");
         //After we have waited 5 seconds print the time again.
 
     }
     public void gotonext() {
         can.SetTrigger("fadeout");
-        StartCoroutine(heartmovement());
     }
 
     private void Update()

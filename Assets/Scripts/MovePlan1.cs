@@ -21,14 +21,16 @@ public class MovePlan1 : MonoBehaviour
         if (playernum == 0)
         {
             movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) + Vector3.up * Physics.gravity.y * Time.deltaTime * gravityCof;
+            Debug.Log("Horizontal:" + Input.GetAxis("Horizontal1").ToString());
+            Debug.Log("Horizontal:" + Input.GetAxis("Vertical1").ToString());
         }
 
         if (playernum == 1)
         {
             Debug.Log("here");
             movement = new Vector3(Input.GetAxis("Horizontal1"), 0, Input.GetAxis("Vertical1")) + Vector3.up * Physics.gravity.y * Time.deltaTime * gravityCof;
-            Debug.Log(Input.GetAxis("Horizontal1"));
-            Debug.Log(Input.GetAxis("Vertical1"));
+            Debug.Log("Horizontal1:" + Input.GetAxis("Horizontal1").ToString());
+            Debug.Log("Horizontal1:" + Input.GetAxis("Vertical1").ToString());
         }
 
     }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class turner : MonoBehaviour
+public class check : MonoBehaviour
 {
-    private int count = 0;
+    public List<Airwall> downdown;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +15,13 @@ public class turner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
 
-    public void OnCollisionEnter(Collision other)
+    public void OnCollisionEnter(Collision collision)
     {
-
+        downdown[0].downlife();
+        Destroy(this);
+        print("checked");
     }
 }

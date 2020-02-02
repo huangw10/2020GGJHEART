@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class turner : MonoBehaviour
+public class Airwall : MonoBehaviour
 {
-    private int count = 0;
+    public int life = 12;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +15,14 @@ public class turner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (life == 0)
+        {
+            Destroy(this);
+        }
     }
 
-    public void OnCollisionEnter(Collision other)
+    public void downlife()
     {
-
+        life -= 1;
     }
 }

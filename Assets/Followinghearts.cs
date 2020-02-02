@@ -9,7 +9,7 @@ public class Followinghearts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,6 +27,15 @@ public class Followinghearts : MonoBehaviour
         {
             this.transform.position = targetPosition.position;
         }
-        
+    }
+
+    public void turnthisway()
+    {
+        this.transform.Rotate(new Vector3(0, 90, 0));
+    }
+
+    public void turnthatway()
+    {
+        this.transform.Rotate(new Vector3(0, -90, 0));
     }
 }

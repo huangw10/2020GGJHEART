@@ -17,11 +17,11 @@ public class Followinghearts : MonoBehaviour
     {
         if (obj_num == 0)
         {
-            this.transform.position = targetPosition.position + new Vector3(.1f, 0, 0);
+            this.transform.position = targetPosition.position + new Vector3(0.4f, 0, 0);
         }
         else if (obj_num == 1)
         {
-            this.transform.position = targetPosition.position + new Vector3(-0.75f, 0, 0);
+            this.transform.position = targetPosition.position + new Vector3(-0.11f, 0, 0);
         }
         else
         {

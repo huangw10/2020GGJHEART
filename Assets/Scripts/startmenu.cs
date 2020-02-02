@@ -9,6 +9,7 @@ public class startmenu : MonoBehaviour
     public Animator heart;
     private GameObject botton;
     public Animator light;
+    public string scenename;
     void Start()
     {
         botton = GameObject.FindGameObjectWithTag("Botton");
@@ -28,7 +29,7 @@ public class startmenu : MonoBehaviour
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("level_0");
+        SceneManager.LoadScene(scenename);
         //After we have waited 5 seconds print the time again.
         
     }

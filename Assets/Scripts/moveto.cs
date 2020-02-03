@@ -4,38 +4,30 @@ using UnityEngine;
 
 public class moveto : MonoBehaviour
 {
-    private float t = 0;
-    Vector3 startPosition;
-    Vector3 target;
-    public Vector3 distance;
+    
+    
     public float timeToReachTarget = 4f;
-    public Vector3 Difference;
     public GameObject Cam1;
-    private bool move = false;
-    private SphereCollider f;
-    private Rigidbody k;
+    public Vector3 smalladjestment;
     void Start()
     {
-        f = this.GetComponent<SphereCollider>();
-        k = this.GetComponent<Rigidbody>();
         Event.instance.nextScene.AddListener(starttomove);
     }
     void starttomove() {
-        move = true;
-        startPosition = this.transform.position;
-        target = Cam1.transform.position + distance;
-        Difference = target - startPosition;
-        f.enabled = false;
-        k.velocity = new Vector3(0,0,0);
+        StartCoroutine(MoveToPosition(this.transform, Cam1.transform.position + smalladjestment, timeToReachTarget));
+        
 
     }
-    void Update()
+
+    public IEnumerator MoveToPosition(Transform transform, Vector3 position, float timeToMove)
     {
-        Debug.Log(move);
-        if (move)
+        var currentPos = transform.position;
+        var t = 0f;
+        while (t < 1)
         {
-            t += Time.deltaTime / timeToReachTarget;
-            transform.position = startPosition + Difference * t;
+            t += Time.deltaTime / timeToMove;
+            transform.position = Vector3.Lerp(currentPos, position, t);
+            yield return null;
         }
     }
     

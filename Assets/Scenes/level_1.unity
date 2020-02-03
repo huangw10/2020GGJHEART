@@ -1885,9 +1885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9728d31f6135ad548b185db8b9addf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: {x: -0.32, y: -7, z: 0}
   timeToReachTarget: 4
-  Difference: {x: 0, y: 0, z: 0}
   Cam1: {fileID: 0}
 --- !u!114 &1592816552
 MonoBehaviour:
@@ -2287,10 +2285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9728d31f6135ad548b185db8b9addf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: {x: 0.32, y: -7, z: 0}
   timeToReachTarget: 4
-  Difference: {x: 0, y: 0, z: 0}
-  Cam1: {fileID: 0}
+  Cam1: {fileID: 6004025013443656626}
 --- !u!1 &1964124227
 GameObject:
   m_ObjectHideFlags: 0

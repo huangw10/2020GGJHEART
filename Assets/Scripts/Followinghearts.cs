@@ -6,37 +6,35 @@ public class Followinghearts : MonoBehaviour
 {
     public Transform targetPosition;
     public float obj_num;
-    private bool a = true;
-    public GameObject otherone;
+    private bool turn = true;
     // Start is called before the first frame update
     void Start()
     {
-
+        Event.instance.nextScene.AddListener(turnoffthis);
     }
 
+    void turnoffthis()
+    {
+        turn = false;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (obj_num == 0)
+        if (turn)
         {
-            this.transform.position = targetPosition.position + new Vector3(0.44f, 0, 0);
-        }
-        else if (obj_num == 1)
-        {
-            this.transform.position = targetPosition.position + new Vector3(-0.18f, 0, 0);
-        }
-        else
-        {
-            this.transform.position = targetPosition.position;
-        }
-
-        if (Vector3.Distance(otherone.transform.position, this.transform.position) < 1.0f && otherone.transform.rotation == this.transform.rotation)
-        {
-            if (a)
+            if (obj_num == 0)
             {
-                Event.instance.nextScene.Invoke();
-                a = false;
+                this.transform.position = targetPosition.position + new Vector3(0.44f, 0, 0);
             }
+            else if (obj_num == 1)
+            {
+                this.transform.position = targetPosition.position + new Vector3(-0.18f, 0, 0);
+            }
+            else
+            {
+                this.transform.position = targetPosition.position;
+            }
+
         }
     }
 

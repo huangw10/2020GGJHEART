@@ -8,6 +8,7 @@ public class camerasystem : MonoBehaviour
     public GameObject MainCamera;
     public GameObject Cam1;
     public GameObject Cam2;
+  //  private bool turnoffornot; 
     private Animator a;
     [SerializeField] private float distance;
     public bool updateornot = true;
@@ -20,8 +21,13 @@ public class camerasystem : MonoBehaviour
     void Start()
     {
         a = this.GetComponent<Animator>();
+        //     Event.instance.nextScene.AddListener(turnthisoff);
     }
 
+    //public void turnthisoff()
+  //  {
+   //     turnoffornot = false;
+  //  }
     public void MergeCamera()
     {
         if (updateornot)
@@ -46,14 +52,17 @@ public class camerasystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (updateornot && Vector3.Distance(Cam1.transform.position, Cam2.transform.position) < distance)
-        {
-            MergeCamera();
-        }
-        if (updateornot == false && Vector3.Distance(Cam1.transform.position, Cam2.transform.position) >= distance)
-        {
-            Debug.Log("split");
-            SplitCamera();
-        }
+       // if (turnoffornot)
+       // {
+            if (updateornot && Vector3.Distance(Cam1.transform.position, Cam2.transform.position) < distance)
+            {
+                MergeCamera();
+            }
+            if (updateornot == false && Vector3.Distance(Cam1.transform.position, Cam2.transform.position) >= distance)
+            {
+                Debug.Log("split");
+                SplitCamera();
+            }
+       // }
     }
 }

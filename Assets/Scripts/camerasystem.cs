@@ -10,7 +10,8 @@ public class camerasystem : MonoBehaviour
     public GameObject Cam2;
   //  private bool turnoffornot; 
     private Animator a;
-    [SerializeField] private float distance;
+    private float distancex = 5f;
+    private float distancey = 3f;
     public bool updateornot = true;
     // Start is called before the first frame update
 
@@ -54,11 +55,11 @@ public class camerasystem : MonoBehaviour
     {
        // if (turnoffornot)
        // {
-            if (updateornot && Vector3.Distance(Cam1.transform.position, Cam2.transform.position) < distance)
+            if (updateornot && Mathf.Abs(Cam1.transform.position.x-Cam2.transform.position.x) < distancex && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) < distancey)
             {
                 MergeCamera();
             }
-            if (updateornot == false && Vector3.Distance(Cam1.transform.position, Cam2.transform.position) >= distance)
+            if (updateornot == false && Mathf.Abs(Cam1.transform.position.x - Cam2.transform.position.x) >= distancex || updateornot == false && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) >= distancey)
             {
                 Debug.Log("split");
                 SplitCamera();

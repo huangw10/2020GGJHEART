@@ -24,6 +24,7 @@ public class startmenu : MonoBehaviour
         StartCoroutine(ExampleCoroutine());
     }
 
+
     IEnumerator ExampleCoroutine()
     {
 
@@ -33,7 +34,14 @@ public class startmenu : MonoBehaviour
         //After we have waited 5 seconds print the time again.
         
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartGame();
+        }
+    }
 
     // Update is called once per frame
-    
+
 }

@@ -590,6 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: {fileID: 540496813}
   light: {fileID: 1292311357}
+  scenename: level_2
 --- !u!95 &1070375521
 Animator:
   serializedVersion: 3

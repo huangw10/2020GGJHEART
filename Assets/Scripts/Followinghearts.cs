@@ -6,7 +6,7 @@ public class Followinghearts : MonoBehaviour
 {
     public Transform targetPosition;
     public float obj_num;
-
+    private bool a = true;
     public GameObject otherone;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,11 @@ public class Followinghearts : MonoBehaviour
 
         if (Vector3.Distance(otherone.transform.position, this.transform.position) < 1.0f && otherone.transform.rotation == this.transform.rotation)
         {
-            Event.instance.nextScene.Invoke();
+            if (a)
+            {
+                Event.instance.nextScene.Invoke();
+                a = false;
+            }
         }
     }
 

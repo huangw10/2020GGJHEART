@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9728d31f6135ad548b185db8b9addf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: {x: 0.2, y: -7, z: 0}
+  distance: {x: 0.1, y: -7, z: 0}
   timeToReachTarget: 4
   Cam1: {fileID: 346388979}
 --- !u!1001 &1406637982
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9728d31f6135ad548b185db8b9addf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: {x: -0.2, y: -7, z: 0}
+  distance: {x: -0.1, y: -7, z: 0}
   timeToReachTarget: 4
   Cam1: {fileID: 346388979}
 --- !u!1 &1706653669

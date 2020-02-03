@@ -9,23 +9,29 @@ public class moveto : MonoBehaviour
     Vector3 target;
     public Vector3 distance;
     public float timeToReachTarget = 4f;
+    public Vector3 Difference;
     public GameObject Cam1;
     private bool move = false;
+    private SphereCollider f;
     void Start()
     {
+        f = this.GetComponent<SphereCollider>();
         Event.instance.nextScene.AddListener(starttomove);
-        startPosition = this.transform.position;
-        target = Cam1.transform.position + distance;
     }
     void starttomove() {
         move = true;
+        startPosition = this.transform.position;
+        target = Cam1.transform.position + distance;
+        Difference = target - startPosition;
+        f.enabled = false;
+
     }
     void Update()
     {
         if (move)
         {
             t += Time.deltaTime / timeToReachTarget;
-            transform.position = Vector3.Lerp(startPosition, target, t);
+            transform.position = startPosition + Difference * t;
         }
     }
     

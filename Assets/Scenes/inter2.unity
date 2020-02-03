@@ -1055,7 +1055,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6386,7 +6386,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28065e333e8459449a3b2a1a86dc55d1, type: 2}
+  - {fileID: 2100000, guid: 62f8b96073bcaee43b21b42126d96a3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11251,7 +11251,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28065e333e8459449a3b2a1a86dc55d1, type: 2}
+  - {fileID: 2100000, guid: 62f8b96073bcaee43b21b42126d96a3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

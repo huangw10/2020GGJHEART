@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 1662093734}
   obj_num: 0
-  otherone: {fileID: 723388803}
+  otherone: {fileID: 346388978}
 --- !u!4 &169157807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d70d1fc193acf49448450f15dd4d4044,

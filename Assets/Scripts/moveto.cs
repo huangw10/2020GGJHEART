@@ -13,9 +13,11 @@ public class moveto : MonoBehaviour
     public GameObject Cam1;
     private bool move = false;
     private SphereCollider f;
+    private Rigidbody k;
     void Start()
     {
         f = this.GetComponent<SphereCollider>();
+        k = this.GetComponent<Rigidbody>();
         Event.instance.nextScene.AddListener(starttomove);
     }
     void starttomove() {
@@ -24,6 +26,7 @@ public class moveto : MonoBehaviour
         target = Cam1.transform.position + distance;
         Difference = target - startPosition;
         f.enabled = false;
+        k.velocity = new Vector3(0,0,0);
 
     }
     void Update()

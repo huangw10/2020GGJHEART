@@ -410,7 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 1832051101}
   obj_num: 1
-  otherone: {fileID: 0}
+  otherone: {fileID: 442189896}
 --- !u!1 &207864763
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 1565134057}
   obj_num: 0
-  otherone: {fileID: 0}
+  otherone: {fileID: 2021695620}
 --- !u!4 &442189899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d70d1fc193acf49448450f15dd4d4044,
@@ -1832,6 +1832,7 @@ GameObject:
   - component: {fileID: 1565134061}
   - component: {fileID: 1565134060}
   - component: {fileID: 1565134059}
+  - component: {fileID: 1565134063}
   - component: {fileID: 1565134058}
   m_Layer: 0
   m_Name: playerleft
@@ -1947,6 +1948,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565134056}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1565134063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565134056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9728d31f6135ad548b185db8b9addf7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: {x: -0.32, y: -7, z: 0}
+  timeToReachTarget: 4
+  Difference: {x: 0, y: 0, z: 0}
+  Cam1: {fileID: 0}
 --- !u!1 &1592816550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6004025013746164231, guid: d81943fcf6a10604285d39f1738a3d21,
@@ -2211,6 +2228,7 @@ GameObject:
   - component: {fileID: 1832051097}
   - component: {fileID: 1832051096}
   - component: {fileID: 1832051095}
+  - component: {fileID: 1832051102}
   m_Layer: 0
   m_Name: playerright
   m_TagString: Untagged
@@ -2338,6 +2356,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832051102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832051094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9728d31f6135ad548b185db8b9addf7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: {x: 0.32, y: -7, z: 0}
+  timeToReachTarget: 4
+  Difference: {x: 0, y: 0, z: 0}
+  Cam1: {fileID: 0}
 --- !u!1 &1964124227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +2836,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1624681716190545918, guid: bcb28bfa431ebce4d81b4705ad617b6c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5600797464602743891, guid: bcb28bfa431ebce4d81b4705ad617b6c,
         type: 3}
       propertyPath: m_LocalPosition.x

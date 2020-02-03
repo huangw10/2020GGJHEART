@@ -9,10 +9,21 @@ public class cameramovement : MonoBehaviour
     [SerializeField]public float smoothSpeed;
 
     [SerializeField] public Vector3 Offset;
+    private bool moveornot = true;
+
+    private void Awake()
+    {
+        Event.instance.nextScene.AddListener(changemoveornot);
+    }
+
+    public void changemoveornot()
+    {
+        moveornot = false;
+    }
 
     void FixedUpdate()
     {
-        if (camerasystem.instance.updateornot)
+        if (moveornot)
         {
             Vector3 desiredPosition = target.position + Offset;
             Vector3 smoothedPosition = Vector3.Lerp(this.transform.position, desiredPosition, smoothSpeed);

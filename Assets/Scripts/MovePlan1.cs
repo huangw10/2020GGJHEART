@@ -19,7 +19,9 @@ public class MovePlan1 : MonoBehaviour
 
 
     public void turnoffcontrol()
-    { setcontrol = false; }
+    { setcontrol = false;
+        rb.isKinematic = true;
+    }
     // Update is called once per frame
     void Update()
     {

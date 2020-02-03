@@ -8,6 +8,7 @@ public class Followinghearts : MonoBehaviour
     public float obj_num;
     private bool a = true;
     public GameObject otherone;
+    public int tweek = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +18,29 @@ public class Followinghearts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (obj_num == 0)
+        if (obj_num == 0 && tweek == 0)
         {
             this.transform.position = targetPosition.position + new Vector3(0.44f, 0, 0);
         }
-        else if (obj_num == 1)
+        else if (obj_num == 1 && tweek == 0)
         {
             this.transform.position = targetPosition.position + new Vector3(-0.18f, 0, 0);
+        }
+        else if (obj_num == 0 && tweek == 1)
+        {
+            this.transform.position = targetPosition.position;// + new Vector3(-0.18f, 0, 0);
+        }
+        else if (obj_num == 1 && tweek == 1)
+        {
+            this.transform.position = targetPosition.position + new Vector3(-0.18f, 0, 0);
+        }
+        else if (obj_num == 0 && tweek == 2)
+        {
+            this.transform.position = targetPosition.position;// + new Vector3(-0.18f, 0, 0);
+        }
+        else if (obj_num == 1 && tweek == 2)
+        {
+            this.transform.position = targetPosition.position + new Vector3(0, 0, 0.2f);
         }
         else
         {

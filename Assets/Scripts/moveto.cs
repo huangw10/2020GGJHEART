@@ -31,6 +31,7 @@ public class moveto : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(move);
         if (move)
         {
             t += Time.deltaTime / timeToReachTarget;

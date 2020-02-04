@@ -6,6 +6,7 @@ public class Followinghearts : MonoBehaviour
 {
     public Transform targetPosition;
     public float obj_num;
+    public int tweek = 1;
     private bool turn = true;
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,21 @@ public class Followinghearts : MonoBehaviour
     {
         if (turn)
         {
-            if (obj_num == 0)
+            if (obj_num == 0 && tweek == 1)
             {
                 this.transform.position = targetPosition.position + new Vector3(0.44f, 0, 0);
             }
-            else if (obj_num == 1)
+            else if (obj_num == 1 && tweek == 1)
             {
                 this.transform.position = targetPosition.position + new Vector3(-0.18f, 0, 0);
+            }
+            else if (obj_num == 0 && tweek == 2)
+            {
+                this.transform.position = targetPosition.position + new Vector3(-0.35f, 0, -0.375f);
+            }
+            else if (obj_num == 1 && tweek == 2)
+            {
+                this.transform.position = targetPosition.position + new Vector3(-0.2f, 0, 0.2f);
             }
             else
             {

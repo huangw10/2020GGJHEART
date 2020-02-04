@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class camerasystem : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class camerasystem : MonoBehaviour
   //  private bool turnoffornot; 
     private Animator a;
     private float distancex = 5f;
-    private float distancey = 3f;
+    private float distancez = 3f;
+    private float distancenx = 3f;
+    private float distanceny = 1.8f;
     public bool updateornot = true;
     // Start is called before the first frame update
 
@@ -53,17 +56,32 @@ public class camerasystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if (turnoffornot)
-       // {
-            if (updateornot && Mathf.Abs(Cam1.transform.position.x-Cam2.transform.position.x) < distancex && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) < distancey)
+        // if (turnoffornot)
+        // {
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            if (updateornot && Mathf.Abs(Cam1.transform.position.x - Cam2.transform.position.x) < distancenx && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) < distanceny)
             {
                 MergeCamera();
             }
-            if (updateornot == false && Mathf.Abs(Cam1.transform.position.x - Cam2.transform.position.x) >= distancex || updateornot == false && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) >= distancey)
+            if (updateornot == false && Mathf.Abs(Cam1.transform.position.x - Cam2.transform.position.x) >= distancenx || updateornot == false && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) >= distanceny)
             {
                 Debug.Log("split");
                 SplitCamera();
             }
+        }
+        else
+        {
+            if (updateornot && Mathf.Abs(Cam1.transform.position.x - Cam2.transform.position.x) < distancex && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) < distancez)
+            {
+                MergeCamera();
+            }
+            if (updateornot == false && Mathf.Abs(Cam1.transform.position.x - Cam2.transform.position.x) >= distancex || updateornot == false && Mathf.Abs(Cam1.transform.position.z - Cam2.transform.position.z) >= distancez)
+            {
+                Debug.Log("split");
+                SplitCamera();
+            }
+        }
        // }
     }
 }

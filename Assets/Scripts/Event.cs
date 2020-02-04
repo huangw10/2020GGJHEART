@@ -26,8 +26,10 @@ public class Event : MonoBehaviour
         yield return new WaitForSeconds(6f);
         if (SceneManager.GetActiveScene().buildIndex == 1)
             SceneManager.LoadScene("inter1");
-        else if(SceneManager.GetActiveScene().buildIndex == 3)
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
             SceneManager.LoadScene("inter2");
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+            SceneManager.LoadScene(0);
         //After we have waited 5 seconds print the time again.
 
     }

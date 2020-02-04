@@ -40,9 +40,6 @@ public class Event : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            nextScene.Invoke();
-        }
 
     }
 }

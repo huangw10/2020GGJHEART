@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovePlan1 : MonoBehaviour
 {
     private Rigidbody rb;
-    private Vector3 movement;
+    public Vector3 movement;
+    public bool controlvault = true;
     public float speed = 5f;
     public float gravityCof = 9.8f;
     public float playernum = 0;
@@ -25,7 +26,7 @@ public class MovePlan1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (setcontrol)
+        if (setcontrol && controlvault)
         {
             if (playernum == 0)
             {
@@ -49,15 +50,4 @@ public class MovePlan1 : MonoBehaviour
     {
         rb.velocity = mm * speed;
     }
-
-    public void turnthisway()
-    {
-            this.transform.Rotate(new Vector3(0, 90, 0));
-    }
-
-    public void turnthatway()
-    {
-            this.transform.Rotate(new Vector3(0, -90, 0));
-    }
-
 }

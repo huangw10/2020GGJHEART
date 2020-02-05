@@ -21,23 +21,38 @@ public class turner : MonoBehaviour
         cd++;
     }
 
-    public void OnTriggerEnter(Collider other)
+    public IEnumerator OnTriggerEnter(Collider other)
     {
+        int i;
         if (count == 0 && cd > 100)
         {
-            TA.transform.Rotate(new Vector3(0, 90, 0));
-            TB.transform.Rotate(new Vector3(0, 0, 90));
+            TB.controlvault = false;
+            for (i = 0; i < 90; i++)
+            {
+                yield return new WaitForSeconds(0.01f);
+                TB.movement = new Vector3(0, 0, 0);
+                TA.transform.Rotate(new Vector3(0, 1, 0));
+                TB.transform.Rotate(new Vector3(0, 0, 1));
+            }
             TA.tweek = 2;
             cd = 0;
             count = 1;
+            TB.controlvault = true;
         }
         else if (count == 1 && cd > 100)
         {
-            TA.transform.Rotate(new Vector3(0, -90, 0));
-            TB.transform.Rotate(new Vector3(0, 0, -90));
+            TB.controlvault = false;
+            for (i = 0; i < 90; i++)
+            {
+                yield return new WaitForSeconds(0.01f);
+                TB.movement = new Vector3(0, 0, 0);
+                TA.transform.Rotate(new Vector3(0, -1, 0));
+                TB.transform.Rotate(new Vector3(0, 0, -1));
+            }
             TA.tweek = 1;
             cd = 0;
             count = 0;
+            TB.controlvault = true;
         }
         else
         {

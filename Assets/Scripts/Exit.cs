@@ -23,12 +23,10 @@ public class Exit : MonoBehaviour
         if (UImanager.instance.isOpen)
         {
             title.SetActive(true);
-            Time.timeScale = 1;
         }
         else
         {
             title.SetActive(false);
-            Time.timeScale = 1;
         }
 
 
@@ -41,12 +39,14 @@ public class Exit : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     UImanager.instance.isOpen = false;
+                    Time.timeScale = 1;
                 }
             }
             else
             {
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
+                    Time.timeScale = 0;
                     UImanager.instance.isOpen = true;
                 }
             }
@@ -71,7 +71,11 @@ public class Exit : MonoBehaviour
                 rightYes1.GetComponent<Renderer>().material = red;
                 rightYes2.GetComponent<Renderer>().material = red;
                 if (Input.GetMouseButtonDown(0))
+                {
                     UImanager.instance.isOpen = false;
+                    Time.timeScale = 1;
+                }
+                    
             }
             else
             {

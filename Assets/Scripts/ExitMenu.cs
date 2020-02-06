@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Exit : MonoBehaviour
+public class ExitMenu : MonoBehaviour
 {
     public GameObject title;
     public Material red;
     public Material blue;
     public GameObject rightYes1;
     public GameObject rightYes2;
-    public float camera_num = 0;
-
+    public GameObject rightNo1;
+    public GameObject rightNo2;
+    // Start is called before the first frame update
     void Start()
     {
         title.SetActive(false);
@@ -19,43 +20,27 @@ public class Exit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (UImanager.instance.isOpen)
+        if (title.activeSelf)
         {
-            title.SetActive(true);
-            Time.timeScale = 1;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                title.SetActive(false);
+                Time.timeScale = 1;
+            }
         }
         else
         {
-            title.SetActive(false);
-            Time.timeScale = 1;
-        }
-
-
-
-
-        if (camera_num == 0)
-        {
-            if (title.activeSelf)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    UImanager.instance.isOpen = false;
-                }
-            }
-            else
-            {
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    UImanager.instance.isOpen = true;
-                }
+                title.SetActive(true);
+                Time.timeScale = 0;
             }
         }
 
         Ray ray = this.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-        
+
         RaycastHit hit;
-    
+
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.transform.tag == "Yes")
@@ -68,15 +53,22 @@ public class Exit : MonoBehaviour
 
             else if (hit.transform.tag == "No")
             {
-                rightYes1.GetComponent<Renderer>().material = red;
-                rightYes2.GetComponent<Renderer>().material = red;
+                rightNo1.GetComponent<Renderer>().material = red;
+                rightNo2.GetComponent<Renderer>().material = red;
                 if (Input.GetMouseButtonDown(0))
-                    UImanager.instance.isOpen = false;
+                {
+                    title.SetActive(false);
+                    Time.timeScale = 1;
+                }
+
+
             }
             else
             {
                 rightYes1.GetComponent<Renderer>().material = blue;
                 rightYes2.GetComponent<Renderer>().material = blue;
+                rightNo1.GetComponent<Renderer>().material = blue;
+                rightNo2.GetComponent<Renderer>().material = blue;
             }
         }
     }
@@ -85,5 +77,6 @@ public class Exit : MonoBehaviour
     {
         Debug.Log("close");
         Application.Quit();
+
     }
 }
